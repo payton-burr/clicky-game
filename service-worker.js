@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/payton-burr/clicky-game/precache-manifest.8988bdaa26896a8186441ea3026afd21.js"
+  "/payton-burr/clicky-game/precache-manifest.11fc13ce67d45626d307fc317efdc75f.js"
 );
 
 self.addEventListener('message', (event) => {
