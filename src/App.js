@@ -8,14 +8,13 @@ class App extends Component {
     score: 0,
     highScore: 0,
     Item,
-    itemArray: [],
-    message: ''
+    itemArray: []
   }
 
   handleChange = (id) => {
     if(this.state.itemArray.includes(id)) {
       this.setState({
-        score: 0, itemArray: [], message: 'Sorry, try again!'
+        score: 0, itemArray: []
       });
     } else {
 
@@ -31,9 +30,10 @@ class App extends Component {
 
     if(this.state.itemArray === 12) {
       this.setState({
-        itemArray: [], message: 'You won!'
+        itemArray: []
       });
     }
+    console.log(this.state.score);
     const shuffle = this.state.Item.sort(() => Math.random() - 0.5);
     this.setState({ Item: shuffle });
   }
@@ -41,7 +41,7 @@ class App extends Component {
     render() {
       return (
         <React.Fragment>
-          <Header />
+          <Header score={this.state.score} highScore={this.state.highScore}/>
           <div>
             {this.state.Item.map(item => (
               <ItemCard
@@ -50,8 +50,7 @@ class App extends Component {
                 id={item.id}
                 key={item.id}
                 handleChange={this.handleChange}
-              />
-            ))}
+            />))}
           </div>
         </React.Fragment>
       );

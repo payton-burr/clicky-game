@@ -1,0 +1,22 @@
+body {
+  background-color: #FFF24B; 
+}
+
+h3 {
+  font-size: 2.3rem;
+  text-align: center;
+  color: #333;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 150px;
+}
+
+section {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
